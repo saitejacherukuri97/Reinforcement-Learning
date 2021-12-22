@@ -48,25 +48,33 @@ policy is given by Bellman Optimality Equation.
 ![image](https://user-images.githubusercontent.com/42407754/147024965-64f54b26-2649-46dc-8893-b9e4ca3ce4de.png)
 
 Here Q is **Action-Value** function or **Q-value** function
+
 • α (Alpha) in the equation is the learning rate which controls convergence. It also 
 determines how our Q-values are updated.
+
 • γ (gamma) Is the discount factor which determines how much importance we have to 
 give to future rewards. A high value for the discount factor will capture long-term 
 rewards.
+
 • So, when the agent performs the action, the Q-value of the agent’s current state and 
 action is stored in a **Q-table**.
+
 • Q-table is a matrix where we have row for each State and column for each action
 
 **Exploration-Exploitation Trade-off:**
 
 • The agent has no idea about the environment in the beginning, So the agent will need 
 to explore the environment rather than to exploit straight away.
+
 • So there’s a need for trade-off between exploration (choosing a random value) and 
 exploitation (choosing actions based on Q-values).
+
 • Also, we need to prevent overfitting i.e preventing the agent to take the same route 
 always, so we introduce another parameter Epsilon (ϵ) to handle this.
+
 • Instead of always selecting the best values from Q-table, we will sometimes explore 
 the action space. 
+
 • This can be achieved by decaying the epsilon value every episode using exponential 
 decay formula
 
